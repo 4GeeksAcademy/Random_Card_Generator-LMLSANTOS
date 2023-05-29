@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Global Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Link -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+
+    <title>Random Card Generator</title>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container">
+      <div class="header">
+        <h3>Card Generator</h3>
+      </div>
+      <div class="main-content">
+        <div class="card">
+          <div class="front"></div>
+          <div class="back">
+            <!--<div class="top-left">
+              <div class="number">A</div>
+              <div class="top-suit">&hearts;</div>
+            </div> -->
+            <div class="top-number">7</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="suit">&hearts;</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="bottom-number">7</div>
+            <!-- <div class="bottom-right">
+              <div class="number">A</div>
+              <div class="bottom-suit">&hearts;</div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="button-area">
+          <button id="new-card">Generate Card</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          Copyright <i class="fa-regular fa-copyright"></i> Luís Santos 05/2023
+        </p>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

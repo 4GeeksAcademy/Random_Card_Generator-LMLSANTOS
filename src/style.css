@@ -1,1 +1,163 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: #bfbfbf;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.container {
+  width: 500px;
+  height: 800px;
+}
+
+.header {
+  width: 70%;
+  background-color: #333333;
+  border: 1px solid #f0ffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px;
+  font-size: 1rem;
+  color: #f0ffff;
+  padding: 8px;
+  margin: 20px auto;
+  letter-spacing: 2px;
+}
+
+.main-content {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(45deg, #006400, #c0c0c0);
+  border-radius: 10px;
+  box-shadow: 0 0 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-content .card {
+  width: 350px;
+  height: 550px;
+  border: 1px solid #4682b4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  margin-top: 20px;
+}
+
+.button-area #new-card {
+  background-color: #333333;
+  color: #f0ffff;
+  padding: 6px 100px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
+  font-size: 1.2rem;
+  margin-top: 60px;
+}
+
+.button-area #new-card:active {
+  background-color: #66cc00;
+  color: #333333;
+}
+
+.footer {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.card {
+  position: relative;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.front {
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  backface-visibility: hidden;
+  background-image: url(./assets/img/rigo-baby.jpg);
+  background-position-x: center;
+  background-size: contain;
+}
+
+.back {
+  background: linear-gradient(45deg, #ffffff, #f5f5f5);
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+/* I remove the :hover for flipped */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+/*I inserted this new styling */
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.main-content {
+  perspective: 1000px;
+}
+
+.back {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1.5em;
+  padding: 1px;
+}
+
+.top-number,
+.bottom-number {
+  text-align: center;
+  align-self: center;
+  font-size: 3em;
+}
+
+/* can be removed */
+
+.suit {
+  text-align: center;
+  align-self: center;
+  font-size: 5em;
+}
+
+/*----------------------------*/
+/*.top-left {
+  padding: 0.1em;
+}
+
+.bottom-right {
+  align-self: end;
+  transform: rotate(180deg);
+}*/
+
+/*.top-left,
+.bottom-right {
+  font-size: 1.7em;
+}*/
+
+/*.top-suit,
+.bottom-suit {
+  color: red;
+}*/
