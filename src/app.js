@@ -3,11 +3,12 @@ import "bootstrap";
 import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
 
 window.onload = () => {
+  generateCard();
   flipCard();
   btnCard.onclick = flipCard;
+  flipCardTime();
 };
 
 // variables
@@ -17,17 +18,23 @@ let bottomNumber = document.querySelector(".bottom-number");
 let suitDeck = document.querySelector(".suit");
 suitDeck.style.color = "purple";
 
+let flipCardTime = () => {
+  setInterval(flipCard, 5000);
+};
 // variable for flipping the card
 let cardFlip = document.querySelector(".card");
 
 // function that flips the card
 const flipCard = () => {
-  cardFlip.classList.toggle("flipped");
-
   let newNumber = generateNumber();
   topNumber.innerText = newNumber;
   bottomNumber.innerText = newNumber;
   generateCard();
+  cardFlip.classList.toggle("flipped");
+
+  setTimeout(() => {
+    cardFlip.classList.remove("flipped");
+  }, 1000);
 };
 // function that generates a number
 const generateNumber = () => {
@@ -66,5 +73,3 @@ const generateCard = () => {
 
   suitDeck.innerHTML = updateCard;
 };
-
-console.log("this is fun or not");

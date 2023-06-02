@@ -103,11 +103,11 @@ body {
   z-index: 1;
   transform: rotateY(180deg);
 }
-/* I remove the :hover for flipped */
+
 .card.flipped {
   transform: rotateY(180deg);
 }
-/*I inserted this new styling */
+
 .card:hover {
   transform: rotateY(180deg);
 }
@@ -134,30 +134,8 @@ body {
   font-size: 3em;
 }
 
-/* can be removed */
-
 .suit {
   text-align: center;
   align-self: center;
   font-size: 5em;
 }
-
-/*----------------------------*/
-/*.top-left {
-  padding: 0.1em;
-}
-
-.bottom-right {
-  align-self: end;
-  transform: rotate(180deg);
-}*/
-
-/*.top-left,
-.bottom-right {
-  font-size: 1.7em;
-}*/
-
-/*.top-suit,
-.bottom-suit {
-  color: red;
-}*/
